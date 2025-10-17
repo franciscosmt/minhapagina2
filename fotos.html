@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria de Fotos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+
+    header.topo {
+      text-align: center;
+      padding: 20px;
+      background-color: #007BFF;
+      color: white;
+    }
+
+    .galeria {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .galeria img {
+      width: 250px;      /* largura fixa */
+      height: 180px;     /* altura fixa */
+      object-fit: cover;  /* corta sem distorcer */
+      cursor: pointer;
+      border-radius: 5px;
+      transition: transform 0.3s;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      width: 80%;      /* tamanho maior dentro do modal */
+      max-width: 800px;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .modal:target {
+      display: flex;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #007BFF;
+      color: white;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <header class="topo">
+    <h1>📸 Galeria de Fotos</h1>
+  </header>
+
+  <div class="galeria">
+    <a href="#img1"><img src="foto1.jpg" alt="Foto 1"></a>
+    <a href="#img2"><img src="foto2.jpg" alt="Foto 2"></a>
+    <a href="#img3"><img src="foto3.jpg" alt="Foto 3"></a>
+    <a href="#img4"><img src="foto4.jpg" alt="Foto 4"></a>
+    <a href="#img5"><img src="foto5.jpg" alt="Foto 5"></a>
+    <a href="#img6"><img src="foto6.jpg" alt="Foto 6"></a>
+  </div>
+
+  <!-- Modais -->
+  <div id="img1" class="modal"><a href="#"><img src="foto1.jpg" alt="Foto 1"></a></div>
+  <div id="img2" class="modal"><a href="#"><img src="foto2.jpg" alt="Foto 2"></a></div>
+  <div id="img3" class="modal"><a href="#"><img src="foto3.jpg" alt="Foto 3"></a></div>
+  <div id="img4" class="modal"><a href="#"><img src="foto4.jpg" alt="Foto 4"></a></div>
+  <div id="img5" class="modal"><a href="#"><img src="foto5.jpg" alt="Foto 5"></a></div>
+  <div id="img6" class="modal"><a href="#"><img src="foto6.jpg" alt="Foto 6"></a></div>
+
+  <footer>
+    <p>Desenvolvido por Ana ©Vitória - 2025</p>
+  </footer>
+</body>
+</html>
